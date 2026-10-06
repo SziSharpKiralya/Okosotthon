@@ -17,34 +17,34 @@ public class OkosotthonTesztek
         this.kozpont = new OkosotthonKozpont();
     }
 
-    //[Test]
-    //public void Kezdetben_MindenEszkoz_Offline()
-    //{
-    //    Assert.That(this.termosztat.OnlineE, Is.False);
-    //    Assert.That(this.okosZar.OnlineE, Is.False);
-    //}
+    [Test]
+    public void Kezdetben_MindenEszkoz_Offline()
+    {
+        Assert.That(this.termosztat.OnlineE, Is.False);
+        Assert.That(this.okosZar.OnlineE, Is.False);
+    }
 
-    //[Test]
-    //public void Csatlakozas_OnlineAllapotraValt()
-    //{
-    //    this.termosztat.Csatlakozas();
-    //    Assert.That(this.termosztat.OnlineE, Is.True);
-    //}
+    [Test]
+    public void Csatlakozas_OnlineAllapotraValt()
+    {
+        this.termosztat.Csatlakozas();
+        Assert.That(this.termosztat.OnlineE, Is.True);
+    }
 
-    //[Test]
-    //public void KapcsolatBontasa_OfflineAllapotraValt()
-    //{
-    //    this.termosztat.Csatlakozas();
-    //    this.termosztat.KapcsolatBontasa();
-    //    Assert.That(this.termosztat.OnlineE, Is.False);
-    //}
+    [Test]
+    public void KapcsolatBontasa_OfflineAllapotraValt()
+    {
+        this.termosztat.Csatlakozas();
+        this.termosztat.KapcsolatBontasa();
+        Assert.That(this.termosztat.OnlineE, Is.False);
+    }
 
-    //[Test]
-    //public void Diagnosztika_OfflineEszkozon_HamissalTerVissza()
-    //{
-    //    bool eredmeny = this.termosztat.DiagnosztikaFuttatasa();
-    //    Assert.That(eredmeny, Is.False);
-    //}
+    [Test]
+    public void Diagnosztika_OfflineEszkozon_HamissalTerVissza()
+    {
+        bool eredmeny = this.termosztat.DiagnosztikaFuttatasa();
+        Assert.That(eredmeny, Is.False);
+    }
 
     //[Test]
     //public void Diagnosztika_OnlineEszkozon_IgazzalTerVissza()
