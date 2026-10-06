@@ -42,8 +42,7 @@ namespace Okosotthon
                 return false;
             }
 
-            OnTesztFuttatasa();
-            return true;
+            return OnTesztFuttatasa();
         }
 
         public virtual void GyariBeallitasokVisszaallitasa()

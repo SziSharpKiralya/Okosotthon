@@ -46,30 +46,30 @@ public class OkosotthonTesztek
         Assert.That(eredmeny, Is.False);
     }
 
-    //[Test]
-    //public void Diagnosztika_OnlineEszkozon_IgazzalTerVissza()
-    //{
-    //    this.termosztat.Csatlakozas();
-    //    bool eredmeny = this.termosztat.DiagnosztikaFuttatasa();
-    //    Assert.That(eredmeny, Is.True);
-    //}
+    [Test]
+    public void Diagnosztika_OnlineEszkozon_IgazzalTerVissza()
+    {
+        this.termosztat.Csatlakozas();
+        bool eredmeny = this.termosztat.DiagnosztikaFuttatasa();
+        Assert.That(eredmeny, Is.True);
+    }
 
-    //[Test]
-    //public void Diagnosztika_ErvenytelenHomerseklethoz_HamissalTerVissza()
-    //{
-    //    this.termosztat.Csatlakozas();
-    //    this.termosztat.ParancsVegrehajtasa("BEALLIT_HOMERSEKLET:50.0");
+    [Test]
+    public void Diagnosztika_ErvenytelenHomerseklethoz_HamissalTerVissza()
+    {
+        this.termosztat.Csatlakozas();
+        this.termosztat.ParancsVegrehajtasa("BEALLIT_HOMERSEKLET:50.0");
 
-    //    bool eredmeny = this.termosztat.DiagnosztikaFuttatasa();
-    //    Assert.That(eredmeny, Is.False);
-    //}
+        bool eredmeny = this.termosztat.DiagnosztikaFuttatasa();
+        Assert.That(eredmeny, Is.False);
+    }
 
-    //[Test]
-    //public void Termosztat_ParancsVegrehajtasa_FrissitiACelHomersekletet()
-    //{
-    //    this.termosztat.ParancsVegrehajtasa("BEALLIT_HOMERSEKLET:24.5");
-    //    Assert.That(this.termosztat.CelHomerseklet, Is.EqualTo(24.5));
-    //}
+    [Test]
+    public void Termosztat_ParancsVegrehajtasa_FrissitiACelHomersekletet()
+    {
+        this.termosztat.ParancsVegrehajtasa("BEALLIT_HOMERSEKLET:24.5");
+        Assert.That(this.termosztat.CelHomerseklet, Is.EqualTo(24.5));
+    }
 
     //[Test]
     //public void OkosZar_Kezdetben_ZartAllapotbanVan()
