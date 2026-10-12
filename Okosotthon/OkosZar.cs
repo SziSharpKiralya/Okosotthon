@@ -21,23 +21,36 @@ namespace Okosotthon
 
         public override void ParancsVegrehajtasa(string parancs)
         {
-            throw new NotImplementedException();
+            string[] parancsReszek = parancs.Split(':');
+            if ( parancs.Contains("NYITAS:") )
+            {
+                if (parancsReszek[1] == PinKod)
+                {
+                    ZartE = false;
+                }
+            }
+            if ( parancs.Contains("ZARAS:") ) 
+            {
+                ZartE = true;
+            }
         }
 
 
         public override string AllapotJelentes()
         {
-            throw new NotImplementedException();
+            return ZartE;
         }
 
         protected override bool OnTesztFuttatasa()
         {
-            throw new NotImplementedException();
+            return true;
         }
 
         public override void GyariBeallitasokVisszaallitasa()
         {
-            throw new NotImplementedException();
+            base.GyariBeallitasokVisszaallitasa();
+            PinKod = "0000";
+            ZartE = true;
         }
 
 
