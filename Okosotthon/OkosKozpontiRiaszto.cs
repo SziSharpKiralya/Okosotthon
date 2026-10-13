@@ -75,7 +75,7 @@ namespace Okosotthon
 
         public string StatisztikatKeszit()
         {
-            return $"Ez egy zár.";
+            return $"{RiasztasokSzama}.";
         }
     }
 }
