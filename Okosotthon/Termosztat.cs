@@ -4,10 +4,11 @@ using System.Text;
 
 namespace Okosotthon
 {
-    public class Termosztat : OkosEszkoz
+    public class Termosztat : OkosEszkoz, IIdozitheto, IStatisztika
     {
         private double jelenlegiHomerseklet;
         private double celHomerseklet;
+        private int idozito;
 
         public double JelenlegiHomerseklet { get => jelenlegiHomerseklet; private set => jelenlegiHomerseklet = value; }
         public double CelHomerseklet { get => celHomerseklet; private set => celHomerseklet = value; }
@@ -46,5 +47,20 @@ namespace Okosotthon
             }
         }
 
+        public void IdozitestBeallit(int perc)
+        {
+            idozito = perc;
+            Console.WriteLine($"Fűtés ideje: {idozito} perc");
+        }
+
+        public int GetMaradtIdo()
+        {
+            return idozito;
+        }
+
+        public string StatisztikatKeszit()
+        {
+            return $"Jelenlegi hőmérséklet: {JelenlegiHomerseklet} °C, Célhőmérséklet: {CelHomerseklet} °C, Hátramaradt idő: {idozito} perc";
+        }
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Okosotthon
 {
-    public class OkosZar: OkosEszkoz
+    public class OkosZar: OkosEszkoz, IHangjelzo, IStatisztika
     {
         private bool zartE;
         private string pinKod;
@@ -57,6 +57,19 @@ namespace Okosotthon
             ZartE = true;
         }
 
+        public void Csipog(int hosszu)
+        {
+            Console.WriteLine($"*Csipogás {hosszu} másodpercig*");
+        }
 
+        public void VeszjelzesInditasa()
+        {
+            Console.WriteLine("Vészjelzés elindítva");
+        }
+
+        public string StatisztikatKeszit()
+        {
+            return $"Ez egy zár.";
+        }
     }
 }
