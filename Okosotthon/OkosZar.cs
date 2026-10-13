@@ -36,9 +36,13 @@ namespace Okosotthon
         }
 
 
-        public override string AllapotJelentes()
-        {
-            return ZartE;
+        public override string AllapotJelentes() 
+        { 
+            if (ZartE) 
+            { 
+                return "Zárva."; 
+            } 
+            return "Nyitva."; 
         }
 
         protected override bool OnTesztFuttatasa()
